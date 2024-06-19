@@ -19,7 +19,7 @@ PRINT_FILTER_BY_DEVICE_AND_ACTIVE = False
 
 if sys.argv.__len__() > 1:
     args_map: dict = {}
-    for index in range(1, 3):
+    for index in range(1, 4):
         if sys.argv[index] is not None and sys.argv[index].__contains__("="):
             key_value = sys.argv[index].split("=")
             args_map[key_value[0]] = key_value[1]

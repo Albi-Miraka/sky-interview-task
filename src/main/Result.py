@@ -209,6 +209,8 @@ def print_title_name_medium(result_right: List[ResultRights], header: str = None
     """
     if header is not None:
         logging.info(header)
+    if result_right is None or result_right.__len__() == 0:
+        logging.info("No Data")
     for result in (result_right or []):
         result.print_title_name_medium()
 
@@ -222,6 +224,8 @@ def print_endpoints(endpoints: List[Endpoint], header: str = None):
     """
     if header is not None:
         logging.info(header)
+    if endpoints is None or endpoints.__len__() == 0:
+        logging.info("No Data")
     for endpoint in (endpoints or []):
         endpoint.print_path()
 
